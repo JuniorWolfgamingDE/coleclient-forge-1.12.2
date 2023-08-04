@@ -4,6 +4,7 @@
     "refmap": "refmap.example.json",
     "mixins": [],
     "client": [
+        "MixinGuiMainMenu",
         "MixinMinecraft"
     ],
     "server": []

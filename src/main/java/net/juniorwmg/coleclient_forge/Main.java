@@ -9,6 +9,6 @@ public class Main {
 
     @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {
-        System.out.println("Hello world!");
+        System.out.println("AMERICANS, LISTEN! YOUR CHOCOLATE IS REAAAAAALLY BAD!");
     }
 }
