@@ -1,11 +1,11 @@
-package com.yourname.modid;
+package net.juniorwmg.coleclient_forge;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Example.MOD_ID)
-public class Example {
-    public static final String MOD_ID = "example";
+@Mod(modid = Main.MOD_ID)
+public class Main {
+    public static final String MOD_ID = "coleclient_forge";
 
     @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {

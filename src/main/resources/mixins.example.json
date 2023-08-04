@@ -1,8 +1,10 @@
 {
     "compatibilityLevel": "JAVA_8",
-    "package": "com.yourname.modid.mixin",
+    "package": "net.juniorwmg.coleclient_forge.mixin",
     "refmap": "refmap.example.json",
     "mixins": [],
-    "client": ["MixinMinecraft"],
+    "client": [
+        "MixinMinecraft"
+    ],
     "server": []
 }

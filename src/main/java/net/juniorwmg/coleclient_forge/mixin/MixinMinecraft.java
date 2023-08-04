@@ -1,4 +1,4 @@
-package com.yourname.modid.mixin;
+package net.juniorwmg.coleclient_forge.mixin;
 
 import net.minecraft.client.Minecraft;
 import org.apache.logging.log4j.Logger;
@@ -18,17 +18,21 @@ public abstract class MixinMinecraft {
     @Shadow
     private boolean fullscreen;
 
+    /**
+     * @author JuniorWMG
+     * @reason Change window name
+     */
     @Overwrite
     private void createDisplay() throws LWJGLException {
         Display.setResizable(true);
-        Display.setTitle("MyCustomTitle");
+        Display.setTitle("Minecraft 1.12.2 - Powered by ColeClient");
         try {
             Display.create((new PixelFormat()).withDepthBits(24));
         } catch (LWJGLException lwjglexception) {
             LOGGER.error("Couldn't set pixel format", lwjglexception);
             try {
                 Thread.sleep(1000L);
-            } catch (InterruptedException e) {
+            } catch (InterruptedException ignored) {
             }
             if (this.fullscreen) {
                 this.updateDisplayMode();
