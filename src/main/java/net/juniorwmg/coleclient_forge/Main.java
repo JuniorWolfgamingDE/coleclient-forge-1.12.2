@@ -3,7 +3,7 @@ package net.juniorwmg.coleclient_forge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = Main.MOD_ID)
+@Mod(modid = Main.MOD_ID, name = "ColeClient")
 public class Main {
     public static final String MOD_ID = "coleclient_forge";
 
