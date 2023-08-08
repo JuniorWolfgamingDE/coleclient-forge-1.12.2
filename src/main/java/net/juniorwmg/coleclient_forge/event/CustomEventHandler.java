@@ -6,13 +6,9 @@ import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-
-// create a custom event handler class that listens to the client tick event
 public class CustomEventHandler {
-    // create a boolean flag to indicate if the GUI has been shown
     private boolean guiShown = false;
 
-    // subscribe to the client tick event
     @SubscribeEvent
     public void onClientTick(TickEvent.ClientTickEvent event) {
         // check if the game is in the main menu and the GUI has not been shown yet
