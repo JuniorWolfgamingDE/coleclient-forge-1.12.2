@@ -1,10 +1,8 @@
 package net.juniorwmg.coleclient_forge;
 
 import net.juniorwmg.coleclient_forge.event.CustomEventHandler;
-import net.minecraft.client.gui.FontRenderer;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 @Mod(modid = Main.MOD_ID, name = "ColeClient")

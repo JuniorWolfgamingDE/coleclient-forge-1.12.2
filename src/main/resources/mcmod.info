@@ -7,7 +7,7 @@
   "mcversion": "${mcversion}",
   "url": "",
   "updateUrl": "",
-  "authorList": ["JuniorWMG"],
+  "authorList": ${mod_author},
   "credits": "",
   "logoFile": "",
   "screenshots": [],

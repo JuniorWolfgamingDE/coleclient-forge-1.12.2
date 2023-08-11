@@ -1,7 +1,7 @@
 {
     "compatibilityLevel": "JAVA_8",
     "package": "net.juniorwmg.coleclient_forge.mixin",
-    "refmap": "refmap.example.json",
+    "refmap": "refmap.coleclient_forge.json",
     "mixins": [],
     "client": [
         "MixinGuiMainMenu",

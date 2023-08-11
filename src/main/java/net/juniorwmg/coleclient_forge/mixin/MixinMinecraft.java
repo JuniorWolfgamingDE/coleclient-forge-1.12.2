@@ -7,19 +7,19 @@ import org.apache.logging.log4j.Logger;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.PixelFormat;
+import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Overwrite;
 import org.spongepowered.asm.mixin.Shadow;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.ByteBuffer;
 
-@Mixin(Minecraft.class)
+@Mixin(value = Minecraft.class, priority = 9999)
 public abstract class MixinMinecraft {
 
+    @Final
     @Shadow
     private static Logger LOGGER;
 
@@ -53,22 +53,18 @@ public abstract class MixinMinecraft {
     private void updateDisplayMode() {
     }
 
+    @Shadow
     private ByteBuffer readImageToBuffer(InputStream imageStream) throws IOException
     {
-        BufferedImage bufferedimage = ImageIO.read(imageStream);
-        int[] aint = bufferedimage.getRGB(0, 0, bufferedimage.getWidth(), bufferedimage.getHeight(), (int[])null, 0, bufferedimage.getWidth());
-        ByteBuffer bytebuffer = ByteBuffer.allocate(4 * aint.length);
-
-        for (int i : aint)
-        {
-            bytebuffer.putInt(i << 8 | i >> 24 & 255);
-        }
-
-        bytebuffer.flip();
-        return bytebuffer;
+        return null;
     }
 
-    private void setWindowIcon()
+    /**
+     * @author JuniorWMG
+     * @reason Replace window icon
+     */
+    @Overwrite
+    public void setWindowIcon()
     {
         Util.EnumOS util$enumos = Util.getOSType();
 
@@ -85,6 +81,7 @@ public abstract class MixinMinecraft {
                 if (inputstream != null && inputstream1 != null)
                 {
                     Display.setIcon(new ByteBuffer[] {this.readImageToBuffer(inputstream), this.readImageToBuffer(inputstream1)});
+                    LOGGER.info("Icon set");
                 }
             }
             catch (IOException ioexception)
