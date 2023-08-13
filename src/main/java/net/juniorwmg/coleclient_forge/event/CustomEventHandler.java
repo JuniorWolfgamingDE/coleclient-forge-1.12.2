@@ -12,7 +12,7 @@ public class CustomEventHandler {
     @SubscribeEvent
     public void onClientTick(TickEvent.ClientTickEvent event) {
         // check if the game is in the main menu and the GUI has not been shown yet
-        if (Minecraft.getMinecraft().currentScreen instanceof GuiMainMenu && !guiShown) {
+        /*if (Minecraft.getMinecraft().currentScreen instanceof GuiMainMenu && !guiShown) {
             // check if OptiFine is loaded using the Loader.isModLoaded method
             if (Loader.isModLoaded("optifine")) {
                 // create an instance of the custom GUI class
@@ -22,6 +22,6 @@ public class CustomEventHandler {
                 // set the flag to true to prevent showing the GUI again
                 guiShown = true;
             }
-        }
+        }*/ // Disabled. WMG 13.08.23
     }
 }
