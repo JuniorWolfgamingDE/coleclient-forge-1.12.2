@@ -1,9 +1,10 @@
 package net.juniorwmg.coleclient_forge;
 
 import net.juniorwmg.coleclient_forge.event.CustomEventHandler;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
-import net.minecraftforge.common.config.Property;
+import net.minecraftforge.fml.client.FMLClientHandler;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
@@ -17,7 +18,6 @@ public class Main {
 
     @Mod.EventHandler
     public void onPreInit(FMLPreInitializationEvent event) {
-
         try {
             configuration = new Configuration(new File(event.getModConfigurationDirectory(), "coleclient.cfg"));
             configuration.load();

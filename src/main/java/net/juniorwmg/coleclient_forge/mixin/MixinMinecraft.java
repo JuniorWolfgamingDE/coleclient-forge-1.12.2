@@ -1,6 +1,7 @@
 package net.juniorwmg.coleclient_forge.mixin;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import org.apache.commons.compress.utils.IOUtils;
 import org.apache.logging.log4j.Logger;
