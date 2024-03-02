@@ -10,7 +10,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import java.io.File;
 
-@Mod(modid = Main.MOD_ID, name = "ColeClient", clientSideOnly = true)
+@Mod(modid = Main.MOD_ID, name = "ColeClient", clientSideOnly = true, version = "1.0")
 public class Main {
     public static final String MOD_ID = "coleclient_forge";
     private static Configuration configuration;

@@ -1,11 +1,11 @@
 {
-    "compatibilityLevel": "JAVA_8",
-    "package": "net.juniorwmg.coleclient_forge.mixin",
-    "refmap": "refmap.coleclient_forge.json",
-    "mixins": [],
-    "client": [
-        "MixinGuiMainMenu",
-        "MixinMinecraft"
-    ],
-    "server": []
+  "compatibilityLevel": "JAVA_8",
+  "package": "net.juniorwmg.coleclient_forge.mixin",
+  "refmap": "refmap.coleclient_forge.json",
+  "client": [
+    "MixinGuiMainMenu",
+    "MixinMinecraft",
+    "MixinCrashReport"
+  ],
+  "server": []
 }

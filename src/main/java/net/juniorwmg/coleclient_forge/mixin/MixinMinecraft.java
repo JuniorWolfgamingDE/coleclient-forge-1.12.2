@@ -1,6 +1,9 @@
 package net.juniorwmg.coleclient_forge.mixin;
 
+import net.juniorwmg.coleclient_forge.gui.GuiMainMenuCC;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.GuiMainMenu;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import org.apache.commons.compress.utils.IOUtils;
@@ -8,10 +11,10 @@ import org.apache.logging.log4j.Logger;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.PixelFormat;
-import org.spongepowered.asm.mixin.Final;
-import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Overwrite;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.*;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -65,7 +68,7 @@ public abstract class MixinMinecraft {
      * @reason Replace window icon
      */
     @Overwrite
-    public void setWindowIcon()
+    private void setWindowIcon()
     {
         Util.EnumOS util$enumos = Util.getOSType();
 
